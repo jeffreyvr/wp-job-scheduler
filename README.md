@@ -4,7 +4,7 @@
 
 This package is an attempt to make job dispatching and scheduling easier in WordPress.
 
-Inspired by the syntax of Laravel and using `Action Scheduler` from WooCommerce, for more reliable handeling.
+Inspired by the syntax of Laravel and using [Action Scheduler](https://github.com/woocommerce/action-scheduler/) from WooCommerce, for more reliable handeling.
 
 ## Installation
 
@@ -36,7 +36,7 @@ You may pass a callback to do some changes on the job before it is dispatched:
 
 ```php
 ExampleJob::dispatch(function($job) {
-    $job->withDelay(30); // seconds
+    $job->withDelay(30);
 });
 ```
 
@@ -79,7 +79,7 @@ class ExampleJob implements Jobable
 
 ## Contributors
 * [Jeffrey van Rossum](https://github.com/jeffreyvr)
-* [All contributors](https://github.com/jeffreyvr/wp-settings/graphs/contributors)
+* [All contributors](https://github.com/jeffreyvr/wp-job-schedular/graphs/contributors)
 
 ## License
 MIT. Please see the [License File](/LICENSE) for more information.

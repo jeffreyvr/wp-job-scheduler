@@ -55,8 +55,6 @@ class Handler
 
     public static function handle($payload = [])
     {
-        ray($payload)->red();
-
         $instance = self::createInstanceFromPayload($payload);
 
         $instance->before();
