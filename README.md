@@ -1,6 +1,6 @@
 > 🚧 This package is still work in progress
 
-# WP Job Schedular
+# WP Job Scheduler
 
 This package is an attempt to make job dispatching and scheduling easier in WordPress.
 
@@ -9,7 +9,7 @@ Inspired by the syntax of Laravel and using [Action Scheduler](https://github.co
 ## Installation
 
 ```bash
-composer require jeffreyvanrossum/wp-job-schedular
+composer require jeffreyvanrossum/wp-job-scheduler
 ```
 
 ## Usage
@@ -79,7 +79,7 @@ class ExampleJob implements Jobable
 
 ## Contributors
 * [Jeffrey van Rossum](https://github.com/jeffreyvr)
-* [All contributors](https://github.com/jeffreyvr/wp-job-schedular/graphs/contributors)
+* [All contributors](https://github.com/jeffreyvr/wp-job-scheduler/graphs/contributors)
 
 ## License
 MIT. Please see the [License File](/LICENSE) for more information.
