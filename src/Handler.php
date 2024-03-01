@@ -25,7 +25,11 @@ class Handler
     public static function createPayloadFromInstance($instance)
     {
         $reflection = new ReflectionClass($instance);
-        $constructorParams = array_column($reflection->getConstructor()->getParameters(), null, 'name');
+        $constructorParams = [];
+
+        if($reflection->getConstructor()) {
+            $constructorParams = array_column($reflection->getConstructor()->getParameters(), null, 'name');
+        }
 
         $properties = [];
         $arguments = [];
