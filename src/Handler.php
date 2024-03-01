@@ -8,7 +8,6 @@ class Handler
 {
     public static function createInstanceFromPayload($payload)
     {
-        // ray($payload);
         $reflectionClass = new ReflectionClass($payload['job']);
         $instance = $reflectionClass->newInstanceArgs($payload['arguments']);
 
@@ -29,6 +28,7 @@ class Handler
         $constructorParams = array_column($reflection->getConstructor()->getParameters(), null, 'name');
 
         $properties = [];
+        $arguments = [];
 
         foreach ($reflection->getProperties() as $property) {
             if (! $property->isPublic()) {
@@ -40,14 +40,14 @@ class Handler
             $properties[$name] = $property->getValue($instance);
 
             if (array_key_exists($name, $constructorParams)) {
-                $constructorParams[$name] = $properties[$name];
+                $arguments[$name] = $properties[$name];
             }
         }
 
         return [
             'dispatch' => [
                 'job' => get_class($instance),
-                'arguments' => $constructorParams,
+                'arguments' => $arguments,
                 'properties' => $properties,
             ],
         ];

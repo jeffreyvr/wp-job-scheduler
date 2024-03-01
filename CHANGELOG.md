@@ -4,6 +4,10 @@ All notable changes to `wp-job-scheduler` will be documented in this file
 
 ## Unreleased
 
+## 0.1.2 - 01-03-2024
+
+- fix passing reflection constructor args instead of array
+
 ## 0.1.1 - 01-03-2024
 
 - added `projectRootPath` to make sure action scheduler is loaded from the project
