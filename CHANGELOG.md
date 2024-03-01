@@ -4,8 +4,10 @@ All notable changes to `wp-job-scheduler` will be documented in this file
 
 ## Unreleased
 
--
+## 0.1.1 - 01-03-2024
 
-## 0.1.0 - yyyy-mm-dd
+- added `projectRootPath` to make sure action scheduler is loaded from the project
+
+## 0.1.0 - 29-02-2024
 
 - initial release

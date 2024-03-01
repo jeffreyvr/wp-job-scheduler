@@ -8,6 +8,8 @@ class WPJobScheduler
 
     public ?Schedule $schedule = null;
 
+    public string|null $projectRootPath = null;
+
     public string $group = 'wp_job_scheduler';
 
     public static function instance()
@@ -26,9 +28,21 @@ class WPJobScheduler
         return $this;
     }
 
+    public function projectRootPath($path)
+    {
+        $this->projectRootPath = $path;
+
+        return $this;
+    }
+
+    public function loadActionScheduler()
+    {
+        require_once $this->projectRootPath.'/vendor/woocommerce/action-scheduler/action-scheduler.php';
+    }
+
     public function scheduler($callback)
     {
-        require_once __DIR__.'/../vendor/woocommerce/action-scheduler/action-scheduler.php';
+        $this->loadActionScheduler();
 
         $this->schedule = new Schedule();
 

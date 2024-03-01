@@ -20,6 +20,7 @@ Within your theme or plugin, add:
 
 ```php
 WPJobScheduler::instance()
+    ->projectRootPath(__DIR__)
     ->scheduler(function() {
         ExampleJob::schedule('hourly');
     })
