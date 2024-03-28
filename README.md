@@ -3,7 +3,7 @@
 <p align="center">
 <a href="https://packagist.org/packages/jeffreyvanrossum/wp-job-scheduler"><img src="https://img.shields.io/packagist/dt/jeffreyvanrossum/wp-job-scheduler" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/jeffreyvanrossum/wp-job-scheduler"><img src="https://img.shields.io/packagist/v/jeffreyvanrossum/wp-job-scheduler" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/jeffreyvanrossum/wp-job-scheduler"><img src="https://img.shields.io/packagist/jeffreyvanrossum/wp-job-scheduler" alt="License"></a>
+<a href="https://packagist.org/packages/jeffreyvanrossum/wp-job-scheduler"><img src="https://img.shields.io/packagist/l/jeffreyvanrossum/wp-job-scheduler" alt="License"></a>
 </p>
 
 # WP Job Scheduler
